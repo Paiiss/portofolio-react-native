@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// import { StatusBar } from 'expo-status-bar'
+import { SafeAreaView } from 'react-native'
+import { Style } from './Style'
+import React from 'react'
 
-export default function App() {
+import Routes from './src/routes'
+
+export default function App(): React.ReactElement {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <SafeAreaView style={Style.SafeArea}>
+      <Routes />
+      {/* <View className="flex-1 items-center justify-center bg-white">
+        <Text>Open up App.tsx to start working on your app!</Text>
+        <Text
+        className="text-center p-5 bg-red-200 rounded-full hover:bg-blue-300
+        active:bg-blue-500"
+        >
+        Changes you make will automatically reload.
+        </Text>
+        <StatusBar style="auto" />
+      </View> */}
+    </SafeAreaView>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
